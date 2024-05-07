@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------Promises-----------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded',function(){
+    function display(something){
+    document.getElementById("demo").innerHTML=something;
+    };
+
+let mypromise=new Promise(function(resolve, reject){
+let x = 0;
+if(x==0){
+resolve("!done");
+}
+else{
+    reject("Facing some issues");
+}
+});
+mypromise.then(
+    function(value){
+        display(value);
+    },
+    function(error){
+        display(error);
+    }
+);
+
+});
